@@ -2,8 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
-  <title>Instituto Fala Quilombo</title>
-  <meta http-equiv="refresh" content="0; url=https://visite.museus.gov.br/18-primavera-dos-museus/fala-quilombombo-uma-palavra-que-tem-historia/" />
+  <title>Fala Quilombo</title>
   <link rel="canonical" href="https://visite.museus.gov.br/18-primavera-dos-museus/fala-quilombombo-uma-palavra-que-tem-historia/" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex" />
@@ -64,14 +63,28 @@
     }
   </style>
   <script>
-    window.location.replace("https://visite.museus.gov.br/18-primavera-dos-museus/fala-quilombombo-uma-palavra-que-tem-historia/");
+    (function () {
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+      var isIOS = /iPad|iPhone|iPod/i.test(ua) || (navigator.userAgent.includes('Mac') && 'ontouchend' in document);
+      var isAndroid = /Android/i.test(ua);
+
+      var iosUrl = "https://fala-quilombo.expo.app";
+      var androidUrl = "https://play.google.com/store/apps/details?id=com.itallolobo.falaquilomboexpo";
+
+      if (isIOS) {
+        window.location.replace(iosUrl);
+      } else if (isAndroid) {
+        window.location.replace(androidUrl);
+      }
+    })();
   </script>
 </head>
 <body>
   <main>
     <h1>Você está sendo redirecionado</h1>
-    <p>Se o redirecionamento não acontecer automaticamente, toque no botão abaixo para acessar o destino.</p>
-    <a href="https://visite.museus.gov.br/18-primavera-dos-museus/fala-quilombombo-uma-palavra-que-tem-historia/">Abrir link agora</a>
+    <p>Se o redirecionamento não acontecer automaticamente, escolha uma opção abaixo:</p>
+    <a href="https://fala-quilombo.expo.app">Abrir no iOS</a>
+    <a href="https://play.google.com/store/apps/details?id=com.itallolobo.falaquilomboexpo">Abrir no Android</a>
   </main>
 </body>
 </html>
